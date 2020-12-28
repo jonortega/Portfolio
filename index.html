@@ -163,4 +163,20 @@
       </div>
     </div>
   </body>
+
+  <!-- JavaScript -->
+  <script>
+    const portfolioItems = document.querySelectorAll(".portfolio-item-wrapper");
+
+    portfolioItems.forEach((portfolioItem) => {
+      portfolioItem.addEventListener("mouseover", () => {
+        portfolioItem.childNodes[1].classList.add("img-darken");
+      });
+
+      portfolioItem.addEventListener("mouseout", () => {
+        portfolioItem.childNodes[1].classList.remove("img-darken");
+      });
+    });
+  </script>
+  <!--You add it at the end of the file so the whole page loads before it runs-->
 </html>
